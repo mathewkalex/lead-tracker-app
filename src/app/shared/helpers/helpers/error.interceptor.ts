@@ -2,11 +2,14 @@ import {Injectable} from '@angular/core';
 import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from "rxjs/operators";
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
-  constructor() {
+  constructor(
+    private toastr: ToastrService
+  ) {
   }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
@@ -22,6 +25,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                        errorMsg = `Error Code: ${error.status},  Message: ${error.message}`;
                     }
                     console.log(errorMsg);
+                    this.toastr.error('invalid username or password');
                     return throwError(errorMsg);
                  })
            )
