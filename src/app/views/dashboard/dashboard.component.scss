@@ -1,0 +1,135 @@
+.form-control,button {
+    border-radius: 4.25rem;
+  }
+
+  .p-8 {
+    padding: 1.2rem;
+  }
+
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.col-lg-3 {
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+.grid {
+    display: grid;
+}
+
+.progress-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+progress, progress[role] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-size: auto;
+  height: 40px;
+  width: 100%;
+  background-color: #FFFFFF !important;
+}
+
+// The unordered list
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+}
+
+// The list item
+.skill {
+  margin-bottom: 1em;
+  position: relative;
+  .words {
+    color: #fff;
+    left: 1em;
+    line-height: 1;
+    position: absolute;
+    top: 0.6em;
+    width: 100%;
+  }
+  ::-webkit-progress-value { 
+    -webkit-animation: bar-fill 2s;
+    width: 0px;
+  }
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+// Style the bar colors
+.skill-1::-webkit-progress-value {
+  background: #C9ECDC;
+}
+
+.skill-1::-moz-progress-bar {
+  background: #C9ECDC;
+}
+
+.skill-2::-webkit-progress-value {
+  background: #F9D8F8;
+}
+
+.skill-2::-moz-progress-bar {
+  background: #F9D8F8;
+}
+
+.skill-3::-webkit-progress-value {
+  background: #F8CDD9;
+}
+
+.skill-3::-moz-progress-bar {
+  background: #F8CDD9;
+}
+
+// Animation Keyframes
+@-webkit-keyframes bar-fill {
+  0% { width: 0; }
+}
+
+@keyframes bar-fill {
+  0% { width: 0; }
+}
+
+.btn-outline-dark {
+  --bs-btn-border-color: #ffff;
+}
+
+.status:hover {
+  background: #3454CF;
+  color: #FFFFFF;
+}
+
+.onclick {
+  background: #3454CF;
+  color: #FFFFFF;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}

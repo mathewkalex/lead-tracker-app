@@ -1,0 +1,46 @@
+<div class="" style="height: 100%;overflow-x: hidden;">
+    <div class="row" style="height: 100%;">
+        <div class="col" style="height: 100%;"
+            style="background:url(../../../assets/img/unsplash_75xPHEQBmvA.png)no-repeat;">
+            <div class="mx-5 d-flex align-items-center" style="height: 100%;">
+                <div class="container-fluid">
+                    <div class="row" style="padding: 2em;">
+                        <h2 class="text-white"
+                            style="font-family: Urbanist;font-size: 40px;font-style: normal;font-weight: 700;line-height: normal;">
+                            All I need to tell you is Listen</h2>
+                        <small class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="height: 100%;">
+            <div class="mx-5 d-flex align-items-center" style="height: 100%;">
+                <div class="container-fluid">
+                    <div class="row" style="padding: 2em;">
+                        <h2 style="color: #000;font-size: 40px;font-weight: 700;">WELCOME!</h2>
+                        <small class="form-text text-muted">Login with username and password</small>
+                    </div>
+                    <div class="row">
+                        <form class="form-group" [formGroup]="loginForm">
+                            <div class="form-group">
+                                <label>Email address</label>
+                                <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="email" class="form-control" aria-describedby="passwordhelp" type="password" formControlName="password"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group my-4">
+                                <button type="button" class="btn btn-primary" style="width: 100%;" (click)="login()" style="background: #3454CF;width:100%" [disabled]="loginForm.invalid">Login</button>
+                                <p class="text-center">Don't have an account? <a href="#">Signup</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
